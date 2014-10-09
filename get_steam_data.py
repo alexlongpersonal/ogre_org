@@ -4,6 +4,7 @@
 import urllib
 import os
 import re
+import lxml.etree as ET
 from game_classes import *
 
 
@@ -38,83 +39,81 @@ name_reg = re.compile('\"name\":\"(.*?)\"')
  
 g_str_list = g_reg.findall(raw_game_str)
 
-game_list = []
+new_list = []
 for g_s in g_str_list:
   app_ID = app_reg.findall(g_s)[0]
   name = name_reg.findall(g_s)[0]
-  game_list.append(game(name, app_ID))
+  new_list.append(game(name, app_ID))
+
+ngames = len(new_list)
 
 
 
-'''
+
 #try to get wikipedia link for game list
-print("Trying to get wikipedia links for game list")
-for game in game_list: scrape_details(game)
-'''
+#new_list =sorted(new_list, key=lambda game: game.name)
+#print("Trying to get wikipedia links for game list")
+#for game in new_list: scrape_details(game)
+#scrape_details(new_list[8])
 
 ###############################################################################
 #check to see if game list should be updated
 #update file if number of games is different
+#build data from file if number of games is the same
 ###############################################################################
-filename= "steam_games_list_{0}.txt".format(steam_user_id)
+filename= "steam_games_list_{0}.xml".format(steam_user_id)
 file_exists = os.path.isfile(filename)
 update_file = True
-ngame = len(game_list)
+old_game_list = []
 if file_exists:
-  ngame_reg = re.compile('ngames:(.*?)$')
-  f_check = open(filename,'r')
-  for line in f_check:
-    if ngame_reg.search(line):
-      print("File has same number of games, not updating")
-      old_ngame = ngame_reg.findall(line)[0]
-      update_file = False
-      f_check.close()
-      break
-  f_check.close() 
+  r_tree = ET.parse(filename)
+  r_root = r_tree.getroot()
+  r_info = r_root[0]
+  old_ngames = int(r_info[1].text)
+  if (old_ngames == ngames):
+    print("File has same number of games, not updating")
+    update_file = False
 
-###############################################################################
-#build game list data from file
-###############################################################################
+  if (update_file == False):
+    r_game_list = r_root[1]
+    for g_itr in r_game_list.findall('game'):
+      name = g_itr.get("name")
+      app_ID = g_itr.find("app_ID").text
+      found_l = g_itr.find("wiki_link_found").text
+      wiki_l = g_itr.find("wiki_string").text
+      old_game_list.append(game(name, app_ID, found_l,wiki_l))
+    new_list = old_game_list
 
-if (update_file == False):
-  game_list = []
-  f_check = open(filename,'r')
-  r_name = re.compile('<name: (.*?)>')
-  r_app = re.compile('<app_ID: (.*?)>')
-  r_found = re.compile('<wiki_found: (.*?)>')
-  r_wiki = re.compile('<wiki_link: (.*?)>')
-  for line in f_check:
-    if r_name.search(line):
-      name = r_name.findall(line)[0]
-      app_ID = r_app.findall(line)[0]
-      found_l = r_found.findall(line)[0] 
-      wiki_l = r_wiki.findall(line)[0]
-      game_list.append(game(name, app_ID, found_l,wiki_l))
+new_list =sorted(new_list, key=lambda game: game.name)
+sort_found_link(new_list)
 
-game_list =sorted(game_list, key=lambda game: game.name)
-sort_found_link(game_list)
-
-
-for g in game_list:
-  g.print_info() 
+for g in new_list:
+  g.print_info()
 
 
 ###############################################################################
-
-
+#write XML file
+###############################################################################
 if (update_file or (file_exists != True )):
-  print("Writing game data to file")
-  f_out = open(filename, 'w')
-  f_out.write("user: {0} ngames: {1}\n".format(steam_user_id, ngame))
-  for game in game_list:
-    f_out.write(str(game))
-  f_out.close()
+  print("Writing game data to XML file")
+  root = ET.Element("root")
+  info = ET.SubElement(root, "info")
+  user = ET.SubElement(info, "user_ID")
+  user.text = steam_user_id
+  ngame_elem = ET.SubElement(info, "num_games")
+  ngame_elem.text = "{0}".format(ngames)
 
+  games = ET.SubElement(root, "game_list")
 
+  for g in new_list:
+    game_elem = ET.SubElement(games, "game")
+    game_elem.set("name", g.name)
+    app_elem = ET.SubElement(game_elem, "app_ID")
+    found_elem = ET.SubElement(game_elem, "wiki_link_found")
+    wiki_elem = ET.SubElement(game_elem, "wiki_string")
+    app_elem.text = g.app_ID
+    found_elem.text = str(g.wiki_link_found)
+    wiki_elem.text = g.wiki_string
 
-
-#f_check = open(filename, 'r')
-#game_data = f_check.readline()
-#game_data = game_data.split()
-#if (game_data[3] == ngame):
-#  print("Skipping file write--games list unchanged")
+  tree = ET.ElementTree(root)
+  tree.write(filename, pretty_print=True )

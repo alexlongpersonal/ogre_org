@@ -1,8 +1,7 @@
 # game_classes.py
 
 import urllib2
-# game data type
-
+import re
 
 
 wiki_title = {}
@@ -33,6 +32,7 @@ def scrape_details(game):
   headers = { 'User-Agent' : 'Mozilla/5.0' }
 
   # try to get the data from the wikipedia page
+  print("name: {0} , trying url: {1}".format(game.name, wiki_app_url))
   html_app_data = ""
   req = urllib2.Request(wiki_app_url, None, headers)
   try:
@@ -40,10 +40,11 @@ def scrape_details(game):
   except urllib2.URLError as e:
     print("URL Error, reason: {0}, code: {1}".format(e.reason, e.code))
  
+  game_reg = re.compile('\{\{infobox video game', re.IGNORECASE) 
   for i,line in enumerate(html_app_data):
     line = line.strip()
     #print(line)
-    if (line == "{{Infobox video game"):
+    if (game_reg.search(line)):
       game.wiki_link_found = True
       game.wiki_string = wiki_string
       print("wikipedia entry found! name: {0}".format(wiki_string))
@@ -55,6 +56,7 @@ def scrape_details(game):
     wiki_string = "{0}_{1}".format(wiki_string, "(video_game)")
     wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
 
+    print("name: {0} , trying url: {1}".format(game.name, wiki_app_url))
     req = urllib2.Request(wiki_app_url, None, headers)
     try:
       html_app_data = urllib2.urlopen(req).readlines()
@@ -69,6 +71,7 @@ def scrape_details(game):
         game.wiki_string = wiki_string
         print("Second attempt wikipedia entry found! name: {0}".format(wiki_string))
         break
+
 
 class game:
   def __init__(self, name, app_ID, wiki_found=False, wiki_str=""):
@@ -86,4 +89,3 @@ class game:
   def print_info(self):
     print("name: {0}   app_ID: {1}  wiki_found: {2}  wiki_link: {3}" \
               .format(self.name, self.app_ID, self.wiki_link_found, self.wiki_string))
-

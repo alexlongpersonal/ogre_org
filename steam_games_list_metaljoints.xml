@@ -1,0 +1,1073 @@
+<root>
+  <info>
+    <user_ID>metaljoints</user_ID>
+    <num_games>213</num_games>
+  </info>
+  <game_list>
+    <game name="Alan Wake">
+      <app_ID>108710</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Alan_Wake</wiki_string>
+    </game>
+    <game name="Alan Wake's American Nightmare">
+      <app_ID>202750</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Alan_Wake's_American_Nightmare</wiki_string>
+    </game>
+    <game name="Alien Swarm">
+      <app_ID>630</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Alien_Swarm</wiki_string>
+    </game>
+    <game name="Amnesia: The Dark Descent">
+      <app_ID>57300</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Amnesia:_The_Dark_Descent</wiki_string>
+    </game>
+    <game name="Anodyne">
+      <app_ID>234900</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Anodyne_(video_game)</wiki_string>
+    </game>
+    <game name="Antichamber">
+      <app_ID>219890</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Antichamber</wiki_string>
+    </game>
+    <game name="Assassin's Creed II">
+      <app_ID>33230</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Assassin's_Creed_II</wiki_string>
+    </game>
+    <game name="Atom Zombie Smasher ">
+      <app_ID>55040</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Atom_Zombie_Smasher</wiki_string>
+    </game>
+    <game name="Audiosurf">
+      <app_ID>12900</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Audiosurf</wiki_string>
+    </game>
+    <game name="Awesomenauts">
+      <app_ID>204300</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Awesomenauts</wiki_string>
+    </game>
+    <game name="Bastion">
+      <app_ID>107100</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Bastion_(video_game)</wiki_string>
+    </game>
+    <game name="Batman: Arkham Asylum">
+      <app_ID>35010</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Batman:_Arkham_Asylum</wiki_string>
+    </game>
+    <game name="BioShock Infinite">
+      <app_ID>8870</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>BioShock_Infinite</wiki_string>
+    </game>
+    <game name="Bionic Commando Rearmed">
+      <app_ID>21680</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Bionic_Commando_Rearmed</wiki_string>
+    </game>
+    <game name="Blueberry Garden">
+      <app_ID>29160</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Blueberry_Garden</wiki_string>
+    </game>
+    <game name="Borderlands">
+      <app_ID>8980</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Borderlands_(video_game)</wiki_string>
+    </game>
+    <game name="Borderlands 2">
+      <app_ID>49520</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Borderlands_2</wiki_string>
+    </game>
+    <game name="Botanicula">
+      <app_ID>207690</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Botanicula</wiki_string>
+    </game>
+    <game name="Braid">
+      <app_ID>26800</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Braid_(video_game)</wiki_string>
+    </game>
+    <game name="Broken Age">
+      <app_ID>232790</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Broken_Age</wiki_string>
+    </game>
+    <game name="Call of Duty 4: Modern Warfare">
+      <app_ID>7940</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Call_of_Duty_4:_Modern_Warfare</wiki_string>
+    </game>
+    <game name="Call of Duty: Modern Warfare 2">
+      <app_ID>10180</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Call_of_Duty:_Modern_Warfare_2</wiki_string>
+    </game>
+    <game name="Capsized">
+      <app_ID>95300</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Capsized_(video_game)</wiki_string>
+    </game>
+    <game name="Castle Crashers">
+      <app_ID>204360</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Castle_Crashers</wiki_string>
+    </game>
+    <game name="Cave Story+">
+      <app_ID>200900</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Cave_Story+</wiki_string>
+    </game>
+    <game name="Crayon Physics Deluxe">
+      <app_ID>26900</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Crayon_Physics_Deluxe</wiki_string>
+    </game>
+    <game name="DEFCON">
+      <app_ID>1520</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>DEFCON_(video_game)</wiki_string>
+    </game>
+    <game name="Darksiders">
+      <app_ID>50620</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Darksiders</wiki_string>
+    </game>
+    <game name="Darwinia">
+      <app_ID>1500</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Darwinia_(video_game)</wiki_string>
+    </game>
+    <game name="Dead Space">
+      <app_ID>17470</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dead_Space_(video_game)</wiki_string>
+    </game>
+    <game name="Dead Space 2">
+      <app_ID>47780</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dead_Space_2</wiki_string>
+    </game>
+    <game name="Dear Esther">
+      <app_ID>203810</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dear_Esther</wiki_string>
+    </game>
+    <game name="Defense Grid: The Awakening">
+      <app_ID>18500</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Defense_Grid:_The_Awakening</wiki_string>
+    </game>
+    <game name="Deus Ex: Human Revolution">
+      <app_ID>28050</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Deus_Ex:_Human_Revolution</wiki_string>
+    </game>
+    <game name="Dishonored">
+      <app_ID>205100</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dishonored</wiki_string>
+    </game>
+    <game name="Don't Starve">
+      <app_ID>219740</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Don't_Starve</wiki_string>
+    </game>
+    <game name="Dota 2">
+      <app_ID>570</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dota_2</wiki_string>
+    </game>
+    <game name="Dust: An Elysian Tail">
+      <app_ID>236090</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dust:_An_Elysian_Tail</wiki_string>
+    </game>
+    <game name="Dustforce">
+      <app_ID>65300</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dustforce</wiki_string>
+    </game>
+    <game name="Dyad">
+      <app_ID>223450</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Dyad_(video_game)</wiki_string>
+    </game>
+    <game name="Everyday Shooter">
+      <app_ID>16300</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Everyday_Shooter</wiki_string>
+    </game>
+    <game name="FTL: Faster Than Light">
+      <app_ID>212680</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>FTL:_Faster_Than_Light</wiki_string>
+    </game>
+    <game name="Fallout: New Vegas">
+      <app_ID>22380</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Fallout:_New_Vegas</wiki_string>
+    </game>
+    <game name="Far Cry">
+      <app_ID>13520</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Far_Cry</wiki_string>
+    </game>
+    <game name="Flotilla">
+      <app_ID>55000</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Flotilla_(video_game)</wiki_string>
+    </game>
+    <game name="Frozen Synapse">
+      <app_ID>98200</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Frozen_Synapse</wiki_string>
+    </game>
+    <game name="Gemini Rue">
+      <app_ID>80310</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Gemini_Rue</wiki_string>
+    </game>
+    <game name="Giana Sisters: Twisted Dreams">
+      <app_ID>223220</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Giana_Sisters:_Twisted_Dreams</wiki_string>
+    </game>
+    <game name="Gish">
+      <app_ID>9500</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Gish_(video_game)</wiki_string>
+    </game>
+    <game name="Gone Home">
+      <app_ID>232430</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Gone_Home</wiki_string>
+    </game>
+    <game name="Gratuitous Space Battles">
+      <app_ID>41800</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Gratuitous_Space_Battles</wiki_string>
+    </game>
+    <game name="Gunpoint">
+      <app_ID>206190</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Gunpoint_(video_game)</wiki_string>
+    </game>
+    <game name="Half-Life 2">
+      <app_ID>220</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Half-Life_2</wiki_string>
+    </game>
+    <game name="Half-Life 2: Episode Two">
+      <app_ID>420</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Half-Life_2:_Episode_Two</wiki_string>
+    </game>
+    <game name="Hammerfight">
+      <app_ID>41100</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Hammerfight</wiki_string>
+    </game>
+    <game name="Hitman: Blood Money">
+      <app_ID>6860</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Hitman:_Blood_Money</wiki_string>
+    </game>
+    <game name="Hotline Miami">
+      <app_ID>219150</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Hotline_Miami</wiki_string>
+    </game>
+    <game name="Iron Brigade">
+      <app_ID>115120</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Iron_Brigade_(video_game)</wiki_string>
+    </game>
+    <game name="Jazzpunk">
+      <app_ID>250260</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Jazzpunk</wiki_string>
+    </game>
+    <game name="Joe Danger">
+      <app_ID>229890</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Joe_Danger</wiki_string>
+    </game>
+    <game name="Just Cause">
+      <app_ID>6880</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Just_Cause_(video_game)</wiki_string>
+    </game>
+    <game name="Just Cause 2">
+      <app_ID>8190</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Just_Cause_2</wiki_string>
+    </game>
+    <game name="Kentucky Route Zero">
+      <app_ID>231200</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Kentucky_Route_Zero</wiki_string>
+    </game>
+    <game name="Left 4 Dead">
+      <app_ID>500</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Left_4_Dead</wiki_string>
+    </game>
+    <game name="Left 4 Dead 2">
+      <app_ID>550</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Left_4_Dead_2</wiki_string>
+    </game>
+    <game name="Little Inferno">
+      <app_ID>221260</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Little_Inferno</wiki_string>
+    </game>
+    <game name="Machinarium">
+      <app_ID>40700</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Machinarium</wiki_string>
+    </game>
+    <game name="Mark of the Ninja">
+      <app_ID>214560</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Mark_of_the_Ninja</wiki_string>
+    </game>
+    <game name="Mass Effect">
+      <app_ID>17460</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Mass_Effect</wiki_string>
+    </game>
+    <game name="Max Payne">
+      <app_ID>12140</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Max_Payne</wiki_string>
+    </game>
+    <game name="Metro 2033">
+      <app_ID>43110</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Metro_2033_(video_game)</wiki_string>
+    </game>
+    <game name="Metro: Last Light">
+      <app_ID>43160</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Metro:_Last_Light</wiki_string>
+    </game>
+    <game name="Mirror's Edge">
+      <app_ID>17410</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Mirror's_Edge</wiki_string>
+    </game>
+    <game name="Mr. Robot">
+      <app_ID>20710</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Mr._Robot</wiki_string>
+    </game>
+    <game name="Multiwinia">
+      <app_ID>1530</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Multiwinia</wiki_string>
+    </game>
+    <game name="Nidhogg">
+      <app_ID>94400</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Nidhogg_(video_game)</wiki_string>
+    </game>
+    <game name="Orcs Must Die! 2">
+      <app_ID>201790</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Orcs_Must_Die!_2</wiki_string>
+    </game>
+    <game name="Papers, Please">
+      <app_ID>239030</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Papers,_Please</wiki_string>
+    </game>
+    <game name="Peggle Nights">
+      <app_ID>3540</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Peggle_Nights</wiki_string>
+    </game>
+    <game name="Portal">
+      <app_ID>400</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Portal_(video_game)</wiki_string>
+    </game>
+    <game name="Portal 2">
+      <app_ID>620</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Portal_2</wiki_string>
+    </game>
+    <game name="Proteus">
+      <app_ID>219680</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Proteus_(video_game)</wiki_string>
+    </game>
+    <game name="Psychonauts">
+      <app_ID>3830</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Psychonauts</wiki_string>
+    </game>
+    <game name="Recettear: An Item Shop's Tale">
+      <app_ID>70400</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Recettear:_An_Item_Shop's_Tale</wiki_string>
+    </game>
+    <game name="Red Faction: Guerrilla ">
+      <app_ID>20500</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Red_Faction:_Guerrilla</wiki_string>
+    </game>
+    <game name="Resonance">
+      <app_ID>212050</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Resonance_(video_game)</wiki_string>
+    </game>
+    <game name="Reus">
+      <app_ID>222730</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Reus_(video_game)</wiki_string>
+    </game>
+    <game name="Risk of Rain">
+      <app_ID>248820</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Risk_of_Rain</wiki_string>
+    </game>
+    <game name="Rock of Ages">
+      <app_ID>22230</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Rock_of_Ages_(video_game)</wiki_string>
+    </game>
+    <game name="Rogue Legacy">
+      <app_ID>241600</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Rogue_Legacy</wiki_string>
+    </game>
+    <game name="S.T.A.L.K.E.R.: Call of Pripyat">
+      <app_ID>41700</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>S.T.A.L.K.E.R.:_Call_of_Pripyat</wiki_string>
+    </game>
+    <game name="S.T.A.L.K.E.R.: Shadow of Chernobyl">
+      <app_ID>4500</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>S.T.A.L.K.E.R.:_Shadow_of_Chernobyl</wiki_string>
+    </game>
+    <game name="Sanctum 2">
+      <app_ID>210770</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Sanctum_2</wiki_string>
+    </game>
+    <game name="Shadowrun Returns">
+      <app_ID>234650</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Shadowrun_Returns</wiki_string>
+    </game>
+    <game name="Shank">
+      <app_ID>6120</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Shank_(video_game)</wiki_string>
+    </game>
+    <game name="Shovel Knight">
+      <app_ID>250760</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Shovel_Knight</wiki_string>
+    </game>
+    <game name="Sir, You Are Being Hunted">
+      <app_ID>242880</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Sir,_You_Are_Being_Hunted</wiki_string>
+    </game>
+    <game name="Skulls of the Shogun">
+      <app_ID>228960</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Skulls_of_the_Shogun</wiki_string>
+    </game>
+    <game name="Space Pirates and Zombies">
+      <app_ID>107200</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Space_Pirates_and_Zombies</wiki_string>
+    </game>
+    <game name="Spelunky">
+      <app_ID>239350</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Spelunky</wiki_string>
+    </game>
+    <game name="Stacking">
+      <app_ID>115110</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Stacking_(video_game)</wiki_string>
+    </game>
+    <game name="SteamWorld Dig">
+      <app_ID>252410</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>SteamWorld_Dig</wiki_string>
+    </game>
+    <game name="Super Meat Boy">
+      <app_ID>40800</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Super_Meat_Boy</wiki_string>
+    </game>
+    <game name="Team Fortress 2">
+      <app_ID>440</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Team_Fortress_2</wiki_string>
+    </game>
+    <game name="Terraria">
+      <app_ID>105600</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Terraria</wiki_string>
+    </game>
+    <game name="Teslagrad">
+      <app_ID>249590</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Teslagrad</wiki_string>
+    </game>
+    <game name="The Binding of Isaac">
+      <app_ID>113200</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Binding_of_Isaac_(video_game)</wiki_string>
+    </game>
+    <game name="The Elder Scrolls IV: Oblivion ">
+      <app_ID>22330</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Elder_Scrolls_IV:_Oblivion</wiki_string>
+    </game>
+    <game name="The Elder Scrolls V: Skyrim">
+      <app_ID>72850</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Elder_Scrolls_V:_Skyrim</wiki_string>
+    </game>
+    <game name="The Path">
+      <app_ID>27000</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Path_(video_game)</wiki_string>
+    </game>
+    <game name="The Stanley Parable">
+      <app_ID>221910</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Stanley_Parable</wiki_string>
+    </game>
+    <game name="The Swapper">
+      <app_ID>231160</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Swapper</wiki_string>
+    </game>
+    <game name="The Walking Dead">
+      <app_ID>207610</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Walking_Dead_(video_game)</wiki_string>
+    </game>
+    <game name="The Walking Dead: Season Two">
+      <app_ID>261030</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>The_Walking_Dead:_Season_Two</wiki_string>
+    </game>
+    <game name="Thirty Flights of Loving">
+      <app_ID>214700</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Thirty_Flights_of_Loving</wiki_string>
+    </game>
+    <game name="Thomas Was Alone">
+      <app_ID>220780</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Thomas_Was_Alone</wiki_string>
+    </game>
+    <game name="Time Gentlemen, Please!">
+      <app_ID>37400</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Time_Gentlemen,_Please!_(video_game)</wiki_string>
+    </game>
+    <game name="To the Moon">
+      <app_ID>206440</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>To_the_Moon</wiki_string>
+    </game>
+    <game name="Torchlight">
+      <app_ID>41500</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Torchlight</wiki_string>
+    </game>
+    <game name="Torchlight II">
+      <app_ID>200710</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Torchlight_II</wiki_string>
+    </game>
+    <game name="Transistor">
+      <app_ID>237930</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Transistor_(video_game)</wiki_string>
+    </game>
+    <game name="Uplink">
+      <app_ID>1510</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Uplink_(video_game)</wiki_string>
+    </game>
+    <game name="VVVVVV">
+      <app_ID>70300</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>VVVVVV</wiki_string>
+    </game>
+    <game name="Wizorb">
+      <app_ID>207420</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Wizorb</wiki_string>
+    </game>
+    <game name="World of Goo">
+      <app_ID>22000</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>World_of_Goo</wiki_string>
+    </game>
+    <game name="XCOM: Enemy Unknown">
+      <app_ID>200510</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>XCOM:_Enemy_Unknown</wiki_string>
+    </game>
+    <game name="Year Walk">
+      <app_ID>269050</app_ID>
+      <wiki_link_found>True</wiki_link_found>
+      <wiki_string>Year_Walk</wiki_string>
+    </game>
+    <game name="10,000,000">
+      <app_ID>227580</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Air Forte ">
+      <app_ID>55020</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="And Yet It Moves">
+      <app_ID>18700</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Anomaly Warzone Earth">
+      <app_ID>91200</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Assassin's Creed Brotherhood">
+      <app_ID>48190</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="BIT.TRIP RUNNER">
+      <app_ID>63710</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Batman: Arkham Asylum GOTY Edition">
+      <app_ID>35140</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Batman: Arkham City GOTY">
+      <app_ID>200260</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Ben There, Dan That!">
+      <app_ID>37420</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Beyond Good &amp; Evil">
+      <app_ID>15130</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Breath of Death VII ">
+      <app_ID>107300</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Brothers - A Tale of Two Sons">
+      <app_ID>225080</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Bully: Scholarship Edition">
+      <app_ID>12200</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Call of Duty: Modern Warfare 2 - Multiplayer">
+      <app_ID>10190</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Cogs">
+      <app_ID>26500</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Cthulhu Saves the World ">
+      <app_ID>107310</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Dark Messiah of Might &amp; Magic Multi-Player">
+      <app_ID>2130</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Dark Messiah of Might &amp; Magic Single Player">
+      <app_ID>2100</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Dark Souls: Prepare to Die Edition">
+      <app_ID>211420</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Defense Grid: Resurgence Map Pack 1">
+      <app_ID>18508</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Defense Grid: Resurgence Map Pack 2 ">
+      <app_ID>18509</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Defense Grid: Resurgence Map Pack 3">
+      <app_ID>18520</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Defense Grid: Resurgence Map Pack 4">
+      <app_ID>18521</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Deus Ex: Game of the Year Edition">
+      <app_ID>6910</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Dragon Age: Origins - Ultimate Edition">
+      <app_ID>47810</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="EDGE">
+      <app_ID>38740</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="ENSLAVED\u2122: Odyssey to the West\u2122 Premium Edition">
+      <app_ID>245280</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Escape Goat 2">
+      <app_ID>255340</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="FEZ">
+      <app_ID>224760</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Fallout 3 - Game of the Year Edition">
+      <app_ID>22370</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Geometry Wars: Retro Evolved">
+      <app_ID>8400</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Guacamelee! Gold Edition">
+      <app_ID>214770</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Gun Monkeys">
+      <app_ID>239450</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Half Minute Hero: Super Mega Neo Climax Ultimate Boy">
+      <app_ID>214830</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Half-Life 2: Episode One">
+      <app_ID>380</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Half-Life 2: Lost Coast">
+      <app_ID>340</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Home">
+      <app_ID>215670</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="IL-2 Sturmovik: 1946">
+      <app_ID>15320</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Intrusion 2">
+      <app_ID>214970</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Jamestown">
+      <app_ID>94200</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Knights of Pen and Paper +1">
+      <app_ID>231740</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="LIMBO">
+      <app_ID>48000</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="LUFTRAUSERS">
+      <app_ID>233150</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Lone Survivor: The Director's Cut">
+      <app_ID>209830</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Lovely Planet">
+      <app_ID>298600</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Max Payne 2: The Fall of Max Payne">
+      <app_ID>12150</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Monaco">
+      <app_ID>113020</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Mount &amp; Blade">
+      <app_ID>22100</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Mount &amp; Blade: Warband">
+      <app_ID>48700</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="NightSky">
+      <app_ID>99700</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="No Time to Explain">
+      <app_ID>227280</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Nuclear Throne">
+      <app_ID>242680</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Offspring Fling!">
+      <app_ID>211360</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="On the Rain-Slick Precipice of Darkness, Episode One">
+      <app_ID>18000</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="On the Rain-Slick Precipice of Darkness, Episode Two">
+      <app_ID>18020</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Peggle Deluxe">
+      <app_ID>3480</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Penny Arcade's On the Rain-Slick Precipice of Darkness 3">
+      <app_ID>213030</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Penny Arcade's On the Rain-Slick Precipice of Darkness 4">
+      <app_ID>237570</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="PixelJunk\u2122 Monsters Ultimate">
+      <app_ID>243780</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="PixelJunk\u2122 Shooter">
+      <app_ID>255870</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Plants vs. Zombies: Game of the Year">
+      <app_ID>3590</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Red Orchestra 2: Heroes of Stalingrad - Single Player">
+      <app_ID>236830</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Red Orchestra 2: Heroes of Stalingrad Beta">
+      <app_ID>104320</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Rising Storm Beta">
+      <app_ID>224780</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Rising Storm\/Red Orchestra 2 Multiplayer">
+      <app_ID>35450</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Roundabout">
+      <app_ID>303430</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sanctum">
+      <app_ID>91600</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV">
+      <app_ID>3900</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV">
+      <app_ID>34440</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV: Beyond the Sword">
+      <app_ID>8800</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV: Beyond the Sword">
+      <app_ID>34460</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV: Colonization">
+      <app_ID>16810</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV: Colonization">
+      <app_ID>34470</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV: Warlords">
+      <app_ID>34450</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization IV: Warlords">
+      <app_ID>3990</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Sid Meier's Civilization V">
+      <app_ID>8930</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Starseed Pilgrim">
+      <app_ID>230980</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Superbrothers: Sword &amp; Sworcery EP">
+      <app_ID>204060</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Teleglitch: Die More Edition">
+      <app_ID>234390</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="The Blackwell Legacy">
+      <app_ID>80330</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="The Secret of Monkey Island: Special Edition">
+      <app_ID>32360</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="The Witcher 2: Assassins of Kings Enhanced Edition">
+      <app_ID>20920</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Tiny and Big: Grandpa's Leftovers">
+      <app_ID>205910</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Waking Mars">
+      <app_ID>227200</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="Warhammer\u00ae 40,000\u2122: Dawn of War\u00ae II">
+      <app_ID>15620</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+    <game name="resident evil 4 \/ biohazard 4">
+      <app_ID>254700</app_ID>
+      <wiki_link_found>False</wiki_link_found>
+      <wiki_string></wiki_string>
+    </game>
+  </game_list>
+</root>
