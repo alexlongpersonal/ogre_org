@@ -6,6 +6,7 @@ import os
 import re
 import lxml.etree as ET
 from game_classes import *
+from game_functions import *
 
 
 steam_user_id = 'metaljoints'
@@ -51,10 +52,19 @@ ngames = len(new_list)
 
 
 #try to get wikipedia link for game list
-#new_list =sorted(new_list, key=lambda game: game.name)
+new_list =sorted(new_list, key=lambda l_game: l_game.name)
 #print("Trying to get wikipedia links for game list")
-#for game in new_list: scrape_details(game)
+#for game_itr in new_list: scrape_details(game_itr)
 #scrape_details(new_list[8])
+
+#calculate percentage found
+num_found = 0
+for game_itr in new_list:
+  if (game_itr.wiki_link_found):
+    num_found = num_found + 1
+
+print("Found: {0} , percent: {1}".format(num_found, float(num_found)/ngames*100))
+
 
 ###############################################################################
 #check to see if game list should be updated
@@ -64,56 +74,29 @@ ngames = len(new_list)
 filename= "steam_games_list_{0}.xml".format(steam_user_id)
 file_exists = os.path.isfile(filename)
 update_file = True
-old_game_list = []
 if file_exists:
-  r_tree = ET.parse(filename)
-  r_root = r_tree.getroot()
-  r_info = r_root[0]
-  old_ngames = int(r_info[1].text)
-  if (old_ngames == ngames):
+  file_game_list, file_ngames = get_game_list_from_XML(filename)
+  if (file_ngames == ngames):
     print("File has same number of games, not updating")
     update_file = False
+    new_list = file_game_list
+  else:
+    print("File has different number of games, adding new games")
+    # do something here that works
 
-  if (update_file == False):
-    r_game_list = r_root[1]
-    for g_itr in r_game_list.findall('game'):
-      name = g_itr.get("name")
-      app_ID = g_itr.find("app_ID").text
-      found_l = g_itr.find("wiki_link_found").text
-      wiki_l = g_itr.find("wiki_string").text
-      old_game_list.append(game(name, app_ID, found_l,wiki_l))
-    new_list = old_game_list
 
-new_list =sorted(new_list, key=lambda game: game.name)
+new_list =sorted(new_list, key=lambda l_game: l_game.name)
 sort_found_link(new_list)
 
-for g in new_list:
-  g.print_info()
+for game_itr in new_list:
+  game_itr.print_info()
 
+num_found = 0
+for game_itr in new_list:
+  if (game_itr.wiki_link_found):
+    num_found = num_found + 1
 
-###############################################################################
-#write XML file
-###############################################################################
-if (update_file or (file_exists != True )):
-  print("Writing game data to XML file")
-  root = ET.Element("root")
-  info = ET.SubElement(root, "info")
-  user = ET.SubElement(info, "user_ID")
-  user.text = steam_user_id
-  ngame_elem = ET.SubElement(info, "num_games")
-  ngame_elem.text = "{0}".format(ngames)
+print("Found: {0} , percent: {1}".format(num_found, float(num_found)/ngames*100))
 
-  games = ET.SubElement(root, "game_list")
-
-  for g in new_list:
-    game_elem = ET.SubElement(games, "game")
-    game_elem.set("name", g.name)
-    app_elem = ET.SubElement(game_elem, "app_ID")
-    found_elem = ET.SubElement(game_elem, "wiki_link_found")
-    wiki_elem = ET.SubElement(game_elem, "wiki_string")
-    app_elem.text = g.app_ID
-    found_elem.text = str(g.wiki_link_found)
-    wiki_elem.text = g.wiki_string
-
-  tree = ET.ElementTree(root)
-  tree.write(filename, pretty_print=True )
+if (update_file or (file_exists == False )):
+  write_new_game_list(new_list, steam_user_id, filename) 
