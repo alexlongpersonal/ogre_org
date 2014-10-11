@@ -174,3 +174,58 @@ def write_new_game_list(game_list, steam_user_id, filename):
   tree.write(filename, pretty_print=True )
 
 ###############################################################################
+
+###############################################################################
+def get_steam_game_list(steam_user_id):
+
+  print("Getting game list for Steam user {0}".format(steam_user_id))
+  steam_user_url = 'http://steamcommunity.com/id/{0}'.format(steam_user_id)
+  all_games_url = '{0}/games/?tab=all'.format(steam_user_url)
+
+  steam_url_obj = urllib.urlopen(all_games_url)
+  html_all_games = steam_url_obj.readlines()
+
+  ###############################################################################
+  # find the long string of games and data from raw HTML
+  ###############################################################################
+  raw_games_str = ""
+
+  for i,line in enumerate(html_all_games):
+    lvec = line.split()
+    if (len(lvec) > 2 ):
+      if (lvec[1] =='rgGames'):
+        raw_game_str = line
+
+  ###############################################################################
+  # parse games and app ID from raw string
+  # (this string is defining a java class)
+  ###############################################################################
+
+  #regular expressions
+  g_reg = re.compile('\{\"appid\".*?\}')
+  app_reg = re.compile('\"appid\":(.*?),')
+  name_reg = re.compile('\"name\":\"(.*?)\"') 
+   
+  g_str_list = g_reg.findall(raw_game_str)
+
+  steam_game_list = []
+  for g_s in g_str_list:
+    app_ID = app_reg.findall(g_s)[0]
+    name = name_reg.findall(g_s)[0]
+    steam_game_list.append(game(name, app_ID))
+
+  ngames = len(steam_game_list)
+
+  return steam_game_list, ngames
+###############################################################################
+
+###############################################################################
+
+def print_percent_found(game_list):
+  num_found = 0
+  ngames = len(game_list)
+  for game_itr in game_list:
+    if (game_itr.wiki_link_found):
+      num_found = num_found + 1
+
+  print("Found: {0} , percent: {1}".format(num_found, float(num_found)/ngames*100))
