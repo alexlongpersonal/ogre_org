@@ -6,19 +6,21 @@ import lxml.etree as ET
 import urllib2
 
 class game:
-  def __init__(self, name, app_ID, wiki_found=False, wiki_str=""):
+  def __init__(self, name, app_ID, wiki_found=False, wiki_str="None", rd=1900, dev="Unlisted", pub="Unlisted" ):
     self.name =  name
     self.app_ID = app_ID 
     self.wiki_string = wiki_str
+    if (wiki_str == ""):
+      wiki_string = "None"
     if (wiki_found == "False"): 
       self.wiki_link_found = False
     elif (wiki_found == "True"):
       self.wiki_link_found = True
     else:
       self.wiki_link_found = wiki_found
-    self.release_date = 1900
-    self.developer = ""
-    self.publisher = ""
+    self.release_date = rd
+    self.developer = dev
+    self.publisher = pub
     self.data_filled = False
   def __str__(self):
     return "<name: {0}>  <app_ID: {1}> <wiki_found: {2}> <wiki_link: {3}>\n" \

@@ -140,9 +140,10 @@ def get_game_list_from_XML(filename):
     app_ID = int(game_itr.find("app_ID").text)
     found_l = game_itr.find("wiki_link_found").text
     wiki_l = game_itr.find("wiki_string").text
-    #publisher = game_itr.find("publisher").text
-    #developer = game_itr.find("developer").text
-    game_list.append(game(name, app_ID, found_l,wiki_l))
+    dev = game_itr.find("developer").text
+    release_date = game_itr.find("publisher").text
+    pub = int(game_itr.find("release_date").text)
+    game_list.append(game(name, app_ID, found_l,wiki_l,release_date, dev, pub))
   return game_list, ngames 
 ###############################################################################
 
@@ -163,12 +164,19 @@ def write_new_game_list(game_list, steam_user_id, filename):
   for g_itr in game_list:
     game_elem = ET.SubElement(games, "game")
     game_elem.set("name", g_itr.name)
+    #elements of game item
     app_elem = ET.SubElement(game_elem, "app_ID")
     found_elem = ET.SubElement(game_elem, "wiki_link_found")
     wiki_elem = ET.SubElement(game_elem, "wiki_string")
+    rd_elem = ET.SubElement(game_elem, "release_date")
+    dev_elem = ET.SubElement(game_elem, "developer")
+    pub_elem = ET.SubElement(game_elem, "publisher")
     app_elem.text = str(g_itr.app_ID)
     found_elem.text = str(g_itr.wiki_link_found)
     wiki_elem.text = g_itr.wiki_string
+    rd_elem.text = str(g_itr.release_date)
+    dev_elem.text = g_itr.developer
+    pub_elem.text = g_itr.publisher
 
   tree = ET.ElementTree(root)
   tree.write(filename, pretty_print=True )

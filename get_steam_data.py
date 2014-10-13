@@ -59,9 +59,7 @@ for game_itr in new_list:
 
 print_percent_found(new_list)
 
-new_list[steam_ngames-2].get_data_from_wiki()
-
-
+#new_list[steam_ngames-2].get_data_from_wiki()
 
 
 if (update_file or (file_exists == False )):
