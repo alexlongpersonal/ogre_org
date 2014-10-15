@@ -122,6 +122,23 @@ def scrape_details(game):
         game.wiki_string = wiki_string
         print("Second attempt wikipedia entry found! name: {0}".format(wiki_string))
         break
+    #try one more time, sometimes (video_game) redirects to (game)
+    if(game.wiki_link_found ==False):
+      for line in html_app_data:
+        if (redirect_reg.search(line)):
+          new_string = redirect_game_reg.findall(line)[0]
+          wiki_string = get_wiki_string(new_string)
+          wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
+          html_app_data, redirect = request_url(wiki_app_url, headers)
+          print("\n\nSecond Attemp--REDIRECTING..... {0} \n\n".format(wiki_string))
+          for i,line in enumerate(html_app_data):
+            line = line.strip()
+            if (game_reg.search(line) or game_reg_alt.search(line)):
+              game.wiki_link_found = True
+              game.wiki_string = wiki_string
+              print("wikipedia entry found! name: {0}".format(wiki_string))
+              break
+      
 ###############################################################################
 
 
@@ -141,9 +158,10 @@ def get_game_list_from_XML(filename):
     found_l = game_itr.find("wiki_link_found").text
     wiki_l = game_itr.find("wiki_string").text
     dev = game_itr.find("developer").text
-    release_date = game_itr.find("publisher").text
-    pub = int(game_itr.find("release_date").text)
-    game_list.append(game(name, app_ID, found_l,wiki_l,release_date, dev, pub))
+    release_date =int(game_itr.find("release_date").text) 
+    pub = game_itr.find("publisher").text
+    filled = game_itr.find("data_filled").text
+    game_list.append(game(name, app_ID, found_l,wiki_l,release_date, dev, pub, filled))
   return game_list, ngames 
 ###############################################################################
 
@@ -162,6 +180,7 @@ def write_new_game_list(game_list, steam_user_id, filename):
   games = ET.SubElement(root, "game_list")
 
   for g_itr in game_list:
+    g_itr.full_info()
     game_elem = ET.SubElement(games, "game")
     game_elem.set("name", g_itr.name)
     #elements of game item
@@ -171,12 +190,14 @@ def write_new_game_list(game_list, steam_user_id, filename):
     rd_elem = ET.SubElement(game_elem, "release_date")
     dev_elem = ET.SubElement(game_elem, "developer")
     pub_elem = ET.SubElement(game_elem, "publisher")
+    data_flag_elem = ET.SubElement(game_elem, "data_filled")
     app_elem.text = str(g_itr.app_ID)
     found_elem.text = str(g_itr.wiki_link_found)
     wiki_elem.text = g_itr.wiki_string
     rd_elem.text = str(g_itr.release_date)
     dev_elem.text = g_itr.developer
     pub_elem.text = g_itr.publisher
+    data_flag_elem.text = str(g_itr.data_filled)
 
   tree = ET.ElementTree(root)
   tree.write(filename, pretty_print=True )
@@ -227,8 +248,8 @@ def get_steam_game_list(steam_user_id):
   return steam_game_list, ngames
 ###############################################################################
 
-###############################################################################
 
+###############################################################################
 def print_percent_found(game_list):
   num_found = 0
   ngames = len(game_list)
@@ -237,3 +258,68 @@ def print_percent_found(game_list):
       num_found = num_found + 1
 
   print("Found: {0} , percent: {1}".format(num_found, float(num_found)/ngames*100))
+
+
+
+###############################################################################
+  def get_data_from_wiki(game):
+    if(game.wiki_link_found == False):
+      print("Can't get data, no wikipedia link!")
+    elif(game.data_filled == True):
+      print("Data already filled in, skipping {0}".format(game.name))
+    else:
+      base_wiki_api_url = 'http://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=xml&titles='
+      data_reg = re.compile('\{\{Infobox Video game(.*?)\}\}',re.DOTALL|re.IGNORECASE)
+      data_reg_alt = re.compile('\{\{Infobox VG(.*?)\}\}',re.DOTALL|re.IGNORECASE)
+      dev_reg = re.compile('developer\s*=\s*(.*?)\|', re.DOTALL)
+      pub_reg = re.compile('publisher\s*=\s*(.*?)\|', re.DOTALL)
+      rd_reg = re.compile('[0-9]{1,2}, ([0-9]{4})', re.DOTALL)
+      #rd_reg = re.compile('\|released = (.*?)\|', re.DOTALL)
+      remove_bars = re.compile('\[\[(.*?)\]\]')
+      clean_rd = re.compile('(.*?)\(')
+      strip_year = re.compile('([0-9]{4})')
+      
+      wiki_app_url = '{0}{1}'.format(base_wiki_api_url, game.wiki_string)
+      headers = {'User-Agent' : 'Mozilla/5.0'}
+      html_app_data = ""
+      
+      print("tring to scrape data for: {0} , URL: {1}".format(game.name, wiki_app_url))
+      req = urllib2.Request(wiki_app_url, None, headers)
+      data = []
+      redirect = False
+      try:
+        data = urllib2.urlopen(req)
+        html_app_data = data.read()
+        if (data.geturl() != wiki_app_url):
+          redirect =True
+      except urllib2.URLError as e:
+        print("URL Error, reason: {0}, code: {1}".format(e.reason, e.code))
+
+      r_root = ET.fromstring(html_app_data)
+      e_data = r_root.find('query') 
+      e_data = e_data.find('pages') 
+      e_data = e_data.find('page') 
+      e_data = e_data.find('revisions') 
+      e_data = e_data.find('rev')
+
+      game_data = ""
+      if (data_reg.search(e_data.text)):
+        game_data = data_reg.findall(e_data.text)[0]
+      else: #(data_reg_alt.search(e_data.text)):
+        game_data = data_reg_alt.findall(e_data.text)[0]
+ 
+      game_data = game_data.lstrip()
+      game_data = game_data.rstrip()
+      if (pub_reg.search(game_data)):
+        pub = (pub_reg.findall(game_data)[0]).rstrip()
+        if(remove_bars.search(pub)): 
+          pub = (remove_bars.findall(pub)[0]).rstrip()
+        if (pub==""): pub = "Unlisted"
+        game.publisher = pub
+      if (dev_reg.search(game_data)):
+        dev =(dev_reg.findall(game_data)[0]).rstrip() 
+        if(remove_bars.search(dev)): 
+          dev = remove_bars.findall(dev)[0]
+        game.developer =  dev
+      if (rd_reg.search(game_data)):
+        game.release_date = (rd_reg.findall(game_data)[0]).rstrip()

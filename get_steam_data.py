@@ -9,6 +9,7 @@ from game_functions import *
 
 
 steam_user_id = 'metaljoints'
+force_write = True
 
 #get the game list from steam
 steam_game_list, steam_ngames = get_steam_game_list(steam_user_id)
@@ -59,8 +60,8 @@ for game_itr in new_list:
 
 print_percent_found(new_list)
 
-#new_list[steam_ngames-2].get_data_from_wiki()
+for g_itr in new_list:
+  g_itr.get_data_from_steam()
 
-
-if (update_file or (file_exists == False )):
+if (update_file or (file_exists == False ) or force_write):
   write_new_game_list(new_list, steam_user_id, filename) 
