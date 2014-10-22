@@ -19,9 +19,6 @@ steam_game_list, steam_ngames = get_steam_game_list(steam_user_id)
 steam_game_list =sorted(steam_game_list, key=lambda l_game: l_game.name)
 
 
-#print("Trying to get wikipedia links for game list")
-#for game_itr in steam_game_list: scrape_details(game_itr)
-#print_percent_found(steam_game_list)
 
 ###############################################################################
 #check to see if game list should be updated
@@ -53,6 +50,7 @@ else:
   new_list = steam_game_list
 
 new_list =sorted(new_list, key=lambda l_game: l_game.name)
+#new_list =sorted(new_list, key=lambda l_game: l_game.release_date, reverse=True)
 #sort_found_link(new_list)
 
 for game_itr in new_list:
@@ -60,8 +58,16 @@ for game_itr in new_list:
 
 print_percent_found(new_list)
 
+
+# Try to get steam data using app ID
+print("Trying to get game info from Steam for game list")
 for g_itr in new_list:
   g_itr.get_data_from_steam()
 
+print("Trying to get wikipedia links for game list")
+for game_itr in new_list: find_wikipedia_url(game_itr)
+
+
+#write XML file
 if (update_file or (file_exists == False ) or force_write):
   write_new_game_list(new_list, steam_user_id, filename) 

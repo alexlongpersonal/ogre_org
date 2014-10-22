@@ -59,7 +59,7 @@ def get_wiki_string(name):
 
 
 ###############################################################################
-def scrape_details(game):
+def find_wikipedia_url(game):
   base_wiki_api_url = 'http://en.wikipedia.org/w/index.php?action=raw&title='
   
   game_reg = re.compile('\{\{infobox video game', re.IGNORECASE) 
@@ -69,68 +69,35 @@ def scrape_details(game):
 
   wiki_string = get_wiki_string(game.name)
 
-  # set up request data
-  wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
-  headers = {'User-Agent' : 'Mozilla/5.0'}
-
-  # try to get the data from the wikipedia page
-  print("name: {0} , trying url: {1}".format(game.name, wiki_app_url))
-  html_app_data, redirect = request_url(wiki_app_url, headers)
-
-  #first check to see if there's game data there
-  for i,line in enumerate(html_app_data):
-    line = line.strip()
-    if (game_reg.search(line) or game_reg_alt.search(line)):
-      game.wiki_link_found = True
-      game.wiki_string = wiki_string
-      print("wikipedia entry found! name: {0}".format(wiki_string))
-      break
-
-  # next check to see if it needs to be redirected
-  if (game.wiki_link_found == False):
-    for line in html_app_data:
-      if (redirect_reg.search(line)):
-        new_string = redirect_game_reg.findall(line)[0]
-        wiki_string = get_wiki_string(new_string)
-        wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
-        html_app_data, redirect = request_url(wiki_app_url, headers)
-        print("\n\nREDIRECTING..... {0} \n\n".format(wiki_string))
-        for i,line in enumerate(html_app_data):
-          line = line.strip()
-          if (game_reg.search(line) or game_reg_alt.search(line)):
-            game.wiki_link_found = True
-            game.wiki_string = wiki_string
-            print("wikipedia entry found! name: {0}".format(wiki_string))
-            break
-
-  # reset wiki string and try with video game appended
-  wiki_string = get_wiki_string(game.name)
-  if (game.wiki_link_found == False):
-    #print("ERROR: Wikipedia entry not found: {0}".format(wiki_string))  
-    #print("Trying name and video game")
-    wiki_string = "{0}_{1}".format(wiki_string, "(video_game)")
+  if (game.wiki_link_found == True):
+    print("Wiki link found, skipping {0}".format(game.name))
+  else:
+    # set up request data
     wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
+    headers = {'User-Agent' : 'Mozilla/5.0'}
 
+    # try to get the data from the wikipedia page
     print("name: {0} , trying url: {1}".format(game.name, wiki_app_url))
     html_app_data, redirect = request_url(wiki_app_url, headers)
-   
+
+    #first check to see if there's game data there
     for i,line in enumerate(html_app_data):
       line = line.strip()
-      #print(line)
       if (game_reg.search(line) or game_reg_alt.search(line)):
         game.wiki_link_found = True
         game.wiki_string = wiki_string
-        print("Second attempt wikipedia entry found! name: {0}".format(wiki_string))
+        print("wikipedia entry found! name: {0}".format(wiki_string))
         break
-    #try one more time, sometimes (video_game) redirects to (game)
-    if(game.wiki_link_found ==False):
+
+    # next check to see if it needs to be redirected
+    if (game.wiki_link_found == False):
       for line in html_app_data:
         if (redirect_reg.search(line)):
           new_string = redirect_game_reg.findall(line)[0]
           wiki_string = get_wiki_string(new_string)
           wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
           html_app_data, redirect = request_url(wiki_app_url, headers)
-          print("\n\nSecond Attemp--REDIRECTING..... {0} \n\n".format(wiki_string))
+          print("\n\nREDIRECTING..... {0} \n\n".format(wiki_string))
           for i,line in enumerate(html_app_data):
             line = line.strip()
             if (game_reg.search(line) or game_reg_alt.search(line)):
@@ -138,6 +105,42 @@ def scrape_details(game):
               game.wiki_string = wiki_string
               print("wikipedia entry found! name: {0}".format(wiki_string))
               break
+
+    # reset wiki string and try with video game appended
+    wiki_string = get_wiki_string(game.name)
+    if (game.wiki_link_found == False):
+      #print("ERROR: Wikipedia entry not found: {0}".format(wiki_string))  
+      #print("Trying name and video game")
+      wiki_string = "{0}_{1}".format(wiki_string, "(video_game)")
+      wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
+
+      print("name: {0} , trying url: {1}".format(game.name, wiki_app_url))
+      html_app_data, redirect = request_url(wiki_app_url, headers)
+     
+      for i,line in enumerate(html_app_data):
+        line = line.strip()
+        #print(line)
+        if (game_reg.search(line) or game_reg_alt.search(line)):
+          game.wiki_link_found = True
+          game.wiki_string = wiki_string
+          print("Second attempt wikipedia entry found! name: {0}".format(wiki_string))
+          break
+      #try one more time, sometimes (video_game) redirects to (game)
+      if(game.wiki_link_found ==False):
+        for line in html_app_data:
+          if (redirect_reg.search(line)):
+            new_string = redirect_game_reg.findall(line)[0]
+            wiki_string = get_wiki_string(new_string)
+            wiki_app_url = '{0}{1}'.format(base_wiki_api_url, wiki_string)
+            html_app_data, redirect = request_url(wiki_app_url, headers)
+            print("\n\nSecond Attemp--REDIRECTING..... {0} \n\n".format(wiki_string))
+            for i,line in enumerate(html_app_data):
+              line = line.strip()
+              if (game_reg.search(line) or game_reg_alt.search(line)):
+                game.wiki_link_found = True
+                game.wiki_string = wiki_string
+                print("wikipedia entry found! name: {0}".format(wiki_string))
+                break
       
 ###############################################################################
 
@@ -180,7 +183,6 @@ def write_new_game_list(game_list, steam_user_id, filename):
   games = ET.SubElement(root, "game_list")
 
   for g_itr in game_list:
-    g_itr.full_info()
     game_elem = ET.SubElement(games, "game")
     game_elem.set("name", g_itr.name)
     #elements of game item
